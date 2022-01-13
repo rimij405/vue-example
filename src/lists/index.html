@@ -1,0 +1,36 @@
+<!DOCTYPE html> 
+<html lang="en">
+    <head>
+        <title>Vue: Lists</title>
+    </head>
+
+        <div id="root">
+            <ul>
+                <li v-for="name in names" v-text="name"></li>
+            </ul>
+
+            <input id="textbox" type="text" v-model="inputValue">
+            <button id="button" @click="addName">Add Name</button>
+
+        </div>
+
+        <!-- development version, includes helpful console warnings -->
+        <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+        <script>
+            const app = new Vue({
+                el: "#root",
+                data: {
+                    inputValue: "",
+                    names: [ "Billy", "Bobby", "Joel" ]
+                },
+                methods: {
+                    addName: function() {
+                        this.names.push(this.inputValue);
+                        this.inputValue = "";
+                    }
+                }
+            });
+        </script>
+    </body>
+</html>

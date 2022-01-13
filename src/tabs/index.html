@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Vue: Message</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+        <style type="text/css"> body, .modal { padding: 50px; } </style>
+    </head>
+
+    <div id="root" class="container">
+        <tabs>
+            <tab name="About Us" :selected="true">
+                <h1>Here is the content for the About Us tab.</h1>
+            </tab>
+            
+            <tab name="About Culture">
+                <h1>Here is the content for the About Culture tab.</h1>
+            </tab>
+            
+            <tab name="About Our Work">
+                <h1>Here is the content for the About Our Work tab.</h1>
+            </tab>
+        </tabs>
+    </div>
+
+    <!-- development version, includes helpful console warnings -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="tabs/main.js"></script>
+
+    </body>
+
+</html>

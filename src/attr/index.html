@@ -1,0 +1,35 @@
+<!DOCTYPE html> 
+<html lang="en">
+    <head>
+        <title>Vue: Attributes</title>
+        <style>
+            .color-red { color: red; }
+            .color-blue { color: blue; }
+        </style>
+    </head>
+
+        <div id="root">
+            <h1>Bound Attributes & Classes</h1>
+            <p :class="{ 'color-red': red }">Hello World!</p>
+            <button :title="title" @click="toggleClass">Hover Over Me!</button>
+        </div>
+
+        <!-- development version, includes helpful console warnings -->
+        <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+        <script>
+            const app = new Vue({
+                el: "#root",
+                data: {
+                    title: "The bound title attribute.",
+                    red: true
+                },
+                methods: {
+                    toggleClass() {
+                        this.red = !this.red;
+                    }
+                }
+            });
+        </script>
+    </body>
+</html>
